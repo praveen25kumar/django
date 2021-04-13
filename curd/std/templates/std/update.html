@@ -1,0 +1,16 @@
+{%extends 'std/base.html'%}
+{%block content%}
+<div class="contianer-sm p-5 my-3 border">
+<div class="row">
+<div class="col-sm-6">
+    <h1 class="text-center alert alert-danger">Update Student Details</h1>
+    <form  method="POST">
+        {%csrf_token%}
+        {{fm.as_p}}
+        <button type="submit" class="btn btn-success">Update</button>
+        <a href={% url 'create' %} class="btn btn-info">Back to Home</a>
+    </form>
+    </div>
+</div>
+
+{%endblock content%}
